@@ -17,4 +17,7 @@ Run `npm run build` to generate a production build in `dist/`.
 The app works fully offline with the built-in Gemma 4 simulator.
 
 If you want live AI on Vercel, add `VITE_GEMINI_API_KEY` in your Vercel project environment variables and redeploy. The app will still fall back to offline mode if the key is missing.
+
+
+
 If you want to quickly access it without worrying about the code then a version is also deployed at : https://nutech-connect.vercel.app/
