@@ -1,0 +1,6 @@
+{
+  "name": "NUTECH Connect",
+  "description": "Unified student portal, AI mentor, fact-checked campus feed, and screenshot-to-calendar event parser for NUTECH campus life.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

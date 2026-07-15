@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#131118] text-glass-textDark antialiased overflow-x-hidden;
+  }
+
+  html.light-mode body {
+    @apply bg-slate-100 text-slate-900;
+  }
+
+  html.light-mode input,
+  html.light-mode textarea {
+    @apply bg-white text-slate-900 border-slate-300 placeholder:text-slate-400;
+  }
+
+  html.light-mode button {
+    @apply focus-visible:ring-2 focus-visible:ring-[#A084E8]/40;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(30, 27, 38, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 132, 232, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 132, 232, 0.5);
+}
+
+/* Animation overrides */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+html.light-mode .text-gray-500,
+html.light-mode .text-gray-400,
+html.light-mode .text-gray-300,
+html.light-mode .text-gray-200 {
+  color: rgb(71 85 105) !important;
+}
+
+html.light-mode .text-gray-700,
+html.light-mode .text-gray-800,
+html.light-mode .text-gray-900 {
+  color: rgb(15 23 42) !important;
+}
+
+html.light-mode .bg-white\/5,
+html.light-mode .bg-white\/10,
+html.light-mode .bg-white\/20,
+html.light-mode .bg-black\/10,
+html.light-mode .bg-black\/20 {
+  background-color: rgb(255 255 255 / 0.96) !important;
+}
+
+html.light-mode .border-black\/5,
+html.light-mode .border-white\/\[0\.04\],
+html.light-mode .border-white\/\[0\.05\],
+html.light-mode .border-white\/\[0\.06\],
+html.light-mode .border-white\/\[0\.08\] {
+  border-color: rgb(226 232 240) !important;
+}
+
+html.light-mode .shadow-lg,
+html.light-mode .shadow-xl,
+html.light-mode .shadow-2xl {
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08) !important;
+}
